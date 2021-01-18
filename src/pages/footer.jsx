@@ -3,7 +3,7 @@ import React from 'react'
 import IconButton from '@material-ui/core/IconButton';
 import {FaSave, FaDoorOpen} from "react-icons/fa"
 import HomeIcon from '@material-ui/icons/Home';
-function Footer ({currentPage, currentPageSet}) {
+function Footer ({currentPage, currentPageSet, paginate}) {
 
 
 
@@ -11,14 +11,14 @@ function Footer ({currentPage, currentPageSet}) {
     return(
         <div className="Footer">
  
-            <IconButton onClick={()=>currentPageSet("currentItem")}className={`bottom-button ${currentPage === "currentItem" ? "highlight" : ""}`} name="currentItem">
-                <FaSave onClick={()=>currentPageSet("currentItem")}  />
+            <IconButton onClick={()=>paginate(0)} className={`bottom-button ${currentPage === "currentItem" ? "highlight" : ""}`} name="currentItem">
+                <FaSave onClick={()=>paginate(0)}  />
             </IconButton>
-            <IconButton onClick={()=>currentPageSet("home")} className={`bottom-button ${currentPage === "home" ? "highlight" : ""}`} name="home">
-                <HomeIcon onClick={()=>currentPageSet("home")} fontSize="large" />
+            <IconButton onClick={()=>paginate(1)} className={`bottom-button ${currentPage === "home" ? "highlight" : ""}`} name="home">
+                <HomeIcon onClick={()=>paginate(1)} fontSize="large" />
             </IconButton>
-            <IconButton onClick={()=>currentPageSet("closets")} className={`bottom-button ${currentPage === "closets" ? "highlight" : ""}`} name="closets">
-                <FaDoorOpen onClick={()=>currentPageSet("closets")} />
+            <IconButton onClick={()=>paginate(2)} className={`bottom-button ${currentPage === "closets" ? "highlight" : ""}`} name="closets">
+                <FaDoorOpen onClick={()=>paginate(2)} />
             </IconButton>
             
         </div>

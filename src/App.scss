@@ -3,6 +3,7 @@
   width: 350px;
   height: 600px;
   background-color: aqua;
+  // margin-left: 500px;
 }
 
 
@@ -270,30 +271,30 @@
 
 }
 
-.Content{
+.Content-Box{
 
   height: 500px;
   background-color:  #F7F8F8;
   display: flex;
-  overflow: auto;
-
+ 
+ 
+  .Content{
+    position: absolute;
+    height: 500px;
+    width: 350px;
+    z-index: 101;
+  }
   .Home{
     height: 100%;
-    width: 350px;
-    z-index: 100;
     background-color:  blue;
   }
   .CurrentItem{
     height: 100%;
-    width: 350px;
-    z-index: 100;
     background-color:  yellow;
   }
 
   .Closets{
     height: 100%;
-    width: 350px;
-    z-index: 100;
     background-color:  green;
   } 
 }
